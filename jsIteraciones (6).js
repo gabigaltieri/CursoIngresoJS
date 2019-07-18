@@ -23,7 +23,14 @@ acumulador += numero;
 promedio = acumulador/ contador;
 
 }
-while ( isNaN (numero));
+while ( isNaN (numero)){
+	numero = prompt ("es incorrecto por favor vuelva a ingresar la clave")
+
+numero = parseInt (numero);
+}
+
+
+
 
 document.getElementById('suma').value=acumulador;
 
