@@ -1,39 +1,49 @@
 function mostrar()
 {
-	var numero;
+
 	var contador=0;
-	var promedio;
-	var acumulador=0;
+	var laSuma=0;
+	var numero;
 
-while (contador <5)
-
+	while (contador<5)
 {
-numero = prompt ("numeros de mierda")
-
-
-numero = parseInt (numero);
-
 
 contador++;
 
+numero= prompt("ingrese un numero");
 
-acumulador += numero;
+numero= parseInt (numero);
 
-
-promedio = acumulador/ contador;
-
+while (isNaN(numero)) {
+	numero= prompt("error, ingrese un numero");
 }
-while ( isNaN (numero)){
-	numero = prompt ("es incorrecto por favor vuelva a ingresar la clave")
+laSuma +=numero;
 
-numero = parseInt (numero);
 }
 
 
+document.getElementById('suma').value=laSuma;
+document.getElementById('promedio').value=laSuma/5;
 
+/*
+var contador = 0;
+	var laSuma = 0;
+	var numero;
+	
 
-document.getElementById('suma').value=acumulador;
-
-document.getElementById('promedio').value=acumulador/5;
+	while(contador < 5){
+		contador++;
+		
+		numero = prompt("Ingrese un numero");
+		numero = parseInt(numero);
+		while(isNaN(numero)){
+			numero= prompt("Error, ingrese un numero");
+		}
+		
+		laSuma +=numero;
+		}
+		document.getElementById('suma').value = laSuma;
+		document.getElementById('promedio').value = laSuma/5;
+	*/
 
 }//FIN DE LA FUNCIÓN

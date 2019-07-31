@@ -1,14 +1,29 @@
 function mostrar()
 {
-	//var acumulador = 0; //(son valores acumulados, una variable + otra variable) acumulador= acumulador+ nota;//
-	
-	var contador = 1;
-	
-	while (contador<10)
-	
-	
+	var contador;contador=0;
+	  
+	  
+	  while (contador< 10);
+	 
+	 { 
+		 contador ++;
+	  alert (contador);
+	 console.log(contador);
+	}
 
-	alert(contador++);
 
+
+/*
+var contador=0;
+
+
+do {
+contador ++;
+console.log(contador);
+
+}
+while (contador<10);
+
+*/
 
 }//FIN DE LA FUNCIÓN

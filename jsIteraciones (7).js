@@ -1,40 +1,30 @@
 function mostrar()
-{	var numero;
-	var promedio;
+{
+
 	var contador=0;
 	var acumulador=0;
 	var respuesta='si';
+	var numero;
+	 while (respuesta=="si"){
+      
+	  numero= prompt("Ingrese un numeros");
+	  numero = parseInt(numero);
 
+   while (isNaN(numero));
+     {numero= prompt ("Error, vuelva a ingresar un numero")
 
-
-while (respuesta == 'si')
-
-{
-	numero = prompt ("ingrese un numero")
+	 numero= parseInt(numero);
+	 }
+	 contador++;
+	 acumulador+=numero
+	 
 	
-numero = parseInt (numero);
-
-contador++;
-
-acumulador += numero;
-
-promedio = acumulador/ contador;
+	var acumulada =document.getElementById('suma').value=acumulada;
+var promedio =document.getElementById('promedio').value=promedio;
 
 
-
-while (isNaN (numero))
-{
-	numero= prompt ("es incorrecto por favor ingrese un numero")
-
-	numero= parseInt (numero);
-}
-
-respuesta= prompt ("desea seguir?")}
-
-document.getElementById('suma').value=acumulador;
-
-document.getElementById('promedio').value=acumulador/contador;
-
-
+respuesta= prompt("¿desea seguir? si/no")
+respuesta= respuesta.toLocaleLowerCase();
+	 }
 
 }//FIN DE LA FUNCIÓN
