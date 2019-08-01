@@ -4,30 +4,47 @@ function mostrar()
 	var contador=0;
 	var positivo=0;
 	var negativo=1;
-	var numero;
 	var respuesta='si';
+	var numero;
+		while (respuesta=="si")
+		{ 
+			numero=prompt("ingrese los numeros");
+			
+			numero=parseInt(numero);
 
-	while (respuesta == 'si')
-	{
-		numero= prompt ("ingrese numeros")
-		numero = parseInt (numero);
+			while (isNaN(numero))
+			{
+				numero=prompt("vuelva a ingresar los numeros");
+			   }
+			  
+			  
+			   contador++;
+			  
+			   if (numero>=0){
 
-		while (isNaN (numero))
-		 {
-			 numero = prompt ("error ingrese otro numero")
-		      numero = parseInt (numero);
-		  }
-if (numero > 0)
-{
-	positivo = numero + positivo 
+				   positivo+=numero;
+			   }
+			   else {
 
-}
-else {
-	negativo *= numero
-}
-	
-respuesta = prompt ("desea ingresar otro numero");
-}
+				   negativo*=numero;
+			   }
+			
+			
+			
+			respuesta=respuesta.toLocaleLowerCase();
+
+			respuesta=prompt("¿desea seguir ingresando numeros? si/no")
+		}		
+		
+
+
+
+
+
+
+
+
+
 
 
 document.getElementById('suma').value=positivo;

@@ -1,38 +1,46 @@
 function mostrar()
 {
 
-	var contador=0;
+	
 	// declarar variables
 	
 	var respuesta='si';
-	var numero; 
-	var maximo =0;
-	var minimo =10**99;
+	var numero;
+	var nroMaximo=0;
+	var nroMinimo=10**99;
+	var contador;
 
-	while(respuesta!='no')
-	{
-		numero = prompt ("ingrese un numero");
-		numero = parseInt (numero);
+    while(respuesta=='si')
 	
-	while (isNaN (numero))
-	{
-		numero= prompt ("es incorrecto, por favor ingrese un numero");
-		numero= parseInt(numero);
-}
+	{  numero=prompt("Ingrese los numeros");
+		numero=parseInt(numero);
+		
+		while (isNaN(numero))
+		{
+			numero=prompt("ERROR, vuelva a ingresar los numeros");
+			numero=parseInt (numero);
+	
+		}
+	   
+	 
+	 if(numero>nroMaximo)
+				{
+					nroMaximo=numero;
+				}	
 
-	if (numero> maximo)
-{
-	maximo= numero
-}
- if (numero< minimo)
- {
-	 minimo= numero
- }
-respuesta = prompt ("desea seguir?");
+			if(numero<nroMinimo)
 
-document.getElementById ('maximo').value=maximo
-document.getElementById ('minimo').value= minimo
-}
+				{
+					nroMinimo=numero;
+				}
+
+		respuesta=respuesta.toLocaleLowerCase();
+		respuesta=prompt("¿desea seguir?");
+				}
+
+	document.getElementById("maximo").value= nroMaximo;
+	document.getElementById("minimo").value= nroMinimo;
+
 
 
 
